@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerController : MonoBehaviour {
 
@@ -48,6 +49,7 @@ public class playerController : MonoBehaviour {
         if (count >= 12)
         {
             winText.text = "You Win!";
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
